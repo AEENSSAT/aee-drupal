@@ -1,0 +1,15 @@
+name: AEE Theme
+description: Thème Drupal pour l'Association des Eleves de l'ENSSAT
+core: 8.x
+type: theme
+base theme: classy
+regions:
+ header: 'Top Bar'
+ navigation: 'Navigation'
+ breadcrumb: 'Breadcrumb'
+ content: 'Content'
+ sidebar_first: 'Primary'
+ sidebar_second: 'Secondary'
+ footer: 'Footer'
+ page_top: 'Page top'
+ page_bottom: 'Page bottom'

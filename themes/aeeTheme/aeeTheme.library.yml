@@ -1,4 +1,4 @@
 styles:
- css:
-   theme:
-     css/main.css: {}
+  css:
+    theme:
+      css/main.css: {}

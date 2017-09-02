@@ -1,14 +1,14 @@
 <?php
 /**
  * @file
- * Contains \Drupal\hello_world\Controller\HelloWorldController.
+ * Contains \Drupal\aee_homepage\Controller\HelloWorldController.
  */
 
-namespace Drupal\hello_world\Controller;
+namespace Drupal\aee_homepage\Controller;
 use Drupal\Core\Controller\ControllerBase;
 
 /**
- * Controller routines for hello_world module routes.
+ * Controller routines for aee_homepage module routes.
  */
 class HomeController extends ControllerBase {
 

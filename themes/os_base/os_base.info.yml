@@ -1,7 +1,7 @@
 name: OS Base
 type: theme
 base theme: classy
-description: 'Theme Drupal 8 destiné au nouveau site de l'AEE
+description: 'Theme Drupal 8 destiné au nouveau site de lAEE'
 # core: 8.x
 libraries:
   - os_base/global-styling

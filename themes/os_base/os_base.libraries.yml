@@ -6,5 +6,4 @@ global-styling:
       fonts/prisma.css: {}
       fonts/sansation.css: {}
   js:
-    theme:
-      js/masonry.pkgd.min.js: {}
+    js/masonry.pkgd.min.js: {}

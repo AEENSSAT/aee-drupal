@@ -2,3 +2,5 @@ styles:
   css:
     theme:
       css/main.css: {}
+  js:
+    js/test.js: {}

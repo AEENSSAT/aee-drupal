@@ -1,7 +1,7 @@
 name: OS Base
 type: theme
 base theme: classy
-description: 'OS Base is clean and powerful Drupal theme. OS Base a fully responsive theme, which means it adapts to the screen resolution of the device it is being viewed on. Latest CSS3 techniques amazing design, all it placed in OS Base theme. <br/> Developed & Designed by <a href="http://ordasoft.com/">OrdaSoft</a>.<br/>For theme support, installation, bug reporting <a href="http://ordasoft.com/Forum/OrdaSoft-template-Support/" >support forum</a><br/>Contact us for Drupal Design & Development via our <a href="http://ordasoft.com/About-us/OrdaSoft.html">Contact Form</a><br/>Documentation for template <a href="http://ordasoft.com/template_documentation/drupal-fitness-club/">Documentation</a></br>Check out all OrdaSoft Drupal themes <a href="http://ordasoft.com/drupal-themes">Drupal Themes</a>'
+description: 'Theme Drupal 8 destiné au nouveau site de l'AEE
 # core: 8.x
 libraries:
   - os_base/global-styling

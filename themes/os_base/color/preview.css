@@ -1,0 +1,23 @@
+/**
+ * @file
+ * preview.css
+ *
+ * Filename:     preview.css
+ * Website:      http://www.ordasoft.com
+ * Description:  template
+ * Author:       ordasoft dev team ordasoft.com.
+ */
+
+.preview {
+  background-image: url('../home.png');
+  background-repeat: no-repeat;
+  width: 1100px;
+  height: 1440px;
+}
+.color-preview-logo,
+.color-preview-site-name,
+.color-preview-main-menu,
+.color-preview-main,
+.color-preview-footer-wrapper {
+  display: none;
+}

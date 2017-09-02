@@ -1,0 +1,1107 @@
+<a name="Top" id="Top"></a>
+<div id="color" class="default">
+<header id="header" class="header" role="header">
+  <div class="container">
+    <div class="row">
+      <div class="staticPanel">
+        <div class="top_header col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          {{ page.header }}
+        </div>
+
+        {% if page.primary_menu %}
+          
+         
+          <nav id="site-navigation" class="navbar navbar-default col-lg-8 col-md-8 col-sm-8 col-xs-12" role="navigation">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar-collapse">
+                     <i class="fa fa-bars"></i>
+                   </button>
+                  <div id="main-navbar-collapse" class="navbar-collapse collapse">
+                      {{ page.primary_menu }}
+                  </div>
+              </div>
+          </nav><!-- #site-navigation -->
+        {% endif %}
+      </div>
+
+    {% if secondary_menu %}
+      <div class="col-lg-8">
+        <nav id="navigation" class="navigation" role="navigation">
+          <div class="container">
+            {{ secondary_menu }}
+          </div>
+        </nav>
+      </div>
+    {% endif %}
+
+    {% if site_name or site_slogan %}
+      <div class="name-and-slogan">
+
+        {# Use h1 when the content title is empty #}
+        {% if title %}
+          <strong class="site-name">
+            <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+          </strong>
+        {% else %}
+          <h1 class="site-name">
+            <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+          </h1>
+        {% endif %}
+
+        {% if site_slogan %}
+          <div class="site-slogan">{{ site_slogan }}</div>
+        {% endif %}
+      </div>
+
+   {% endif %}
+
+   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu-inner">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+  </div>
+  </div>
+</header>
+<div class="page">
+{% if page.slideshow %}
+  <section id="slideshow" class="slideshow">
+    <div class="">
+      {{ page.slideshow }}
+    </div>
+  </section>
+{% endif %}
+
+{% if page.top1 or page.top2 or page.top3 or page.top4 %}
+  <div class="container">
+    <div class="row">
+      {% if page.top1 %}
+        {% if page.top2 and page.top3 and page.top4 %}
+          <div class="col-lg-3">
+          {% elseif page.top2 and page.top3 %}
+            <div class="col-lg-4">
+          {% elseif page.top2 and page.top4 %}
+            <div class="col-lg-4">
+          {% elseif page.top3 and page.top4 %}
+            <div class="col-lg-4">
+          {% elseif page.top2 or page.top3 or page.top4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="top1">{{ page.top1 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.top2 %}
+        {% if page.top1 and page.top3 and page.top4 %}
+          <div class="col-lg-3">
+          {% elseif page.top1 and page.top3 %}
+            <div class="col-lg-4">
+          {% elseif page.top1 and page.top4 %}
+            <div class="col-lg-4">
+          {% elseif page.top3 and page.top4 %}
+            <div class="col-lg-4">
+          {% elseif page.top1 or page.top3 or page.top4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="top2">{{ page.top2 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.top3 %}
+        {% if page.top1 and page.top2 and page.top4 %}
+          <div class="col-lg-3">
+          {% elseif page.top1 and page.top2 %}
+            <div class="col-lg-4">
+          {% elseif page.top1 and page.top4 %}
+            <div class="col-lg-4">
+          {% elseif page.top2 and page.top4 %}
+            <div class="col-lg-4">
+          {% elseif page.top1 or page.top2 or page.top4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="top3">{{ page.top3 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.top4 %}
+        {% if page.top1 and page.top2 and page.top3 %}
+          <div class="col-lg-3">
+          {% elseif page.top1 and page.top2 %}
+            <div class="col-lg-4">
+          {% elseif page.top1 and page.top3 %}
+            <div class="col-lg-4">
+          {% elseif page.top2 and page.top3 %}
+            <div class="col-lg-4">
+          {% elseif page.top1 or page.top2 or page.top3 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="top4">{{ page.top4 }}</div>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+{% endif %}
+
+{% if page.top_content1 or page.top_content2 or page.top_content3 or page.top_content4 %}
+  <div class="container">
+    <div class="row">
+      {% if page.top_content1 %}
+        {% if page.top_content2 and page.top_content3 and page.top_content4 %}
+          <div class="col-lg-3">
+          {% elseif page.top_content2 and page.top_content3 %}
+            <div class="col-lg-4">
+          {% elseif page.top_content2 and page.top_content4 %}
+            <div class="col-lg-4">
+          {% elseif page.top_content3 and page.top_content4 %}
+            <div class="col-lg-4">
+          {% elseif page.top_content2 or page.top_content3 or page.top_content4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="top_content1">{{ page.top_content1 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.top_content2 %}
+        {% if page.top_content1 and page.top_content3 and page.top_content4 %}
+          <div class="col-lg-3">
+          {% elseif page.top_content1 and page.top_content3 %}
+            <div class="col-lg-4">
+          {% elseif page.top_content1 and page.top_content4 %}
+            <div class="col-lg-4">
+          {% elseif page.top_content3 and page.top_content4 %}
+            <div class="col-lg-4">
+          {% elseif page.top_content1 or page.top_content3 or page.top_content4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="top_content2">{{ page.top_content2 }}</div>
+        </div>
+      {% endif %}  
+
+      {% if page.top_content3 %}
+        {% if page.top_content1 and page.top_content2 and page.top_content4 %}
+          <div class="col-lg-3">
+          {% elseif page.top_content1 and page.top_content2 %}
+            <div class="col-lg-4">
+          {% elseif page.top_content1 and page.top_content4 %}
+            <div class="col-lg-4">
+          {% elseif page.top_content2 and page.top_content4 %}
+            <div class="col-lg-4">
+          {% elseif page.top_content1 or page.top_content2 or page.top_content4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="top_content3">{{ page.top_content3 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.top_content4 %}
+        {% if page.top_content1 and page.top_content2 and page.top_content3 %}
+          <div class="col-lg-3">
+          {% elseif page.top_content1 and page.top_content2 %}
+            <div class="col-lg-4">
+          {% elseif page.top_content1 and page.top_content3 %}
+            <div class="col-lg-4">
+          {% elseif page.top_content2 and page.top_content3 %}
+            <div class="col-lg-4">
+          {% elseif page.top_content1 or page.top_content2 or page.top_content3 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="top4">{{ page.top_content4 }}</div>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+{% endif %}
+
+{% if page.line1 or page.line2 or page.line3 or page.line4 %}
+  <div class="container">
+    <div class="row">
+      {% if page.line1 %}
+        {% if page.line2 and page.line3 and page.line4 %}
+          <div class="col-lg-3">
+          {% elseif page.line2 and page.line3 %}
+            <div class="col-lg-4">
+          {% elseif page.line2 and page.line4 %}
+            <div class="col-lg-4">
+          {% elseif page.line3 and page.line4 %}
+            <div class="col-lg-4">
+          {% elseif page.line2 or page.line3 or page.line4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="line1">{{ page.line1 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.line2 %}
+        {% if page.line1 and page.line3 and page.line4 %}
+          <div class="col-lg-3">
+          {% elseif page.line1 and page.line3 %}
+            <div class="col-lg-4">
+          {% elseif page.line1 and page.line4 %}
+            <div class="col-lg-4">
+          {% elseif page.line3 and page.line4 %}
+            <div class="col-lg-4">
+          {% elseif page.line1 or page.line3 or page.line4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="line2">{{ page.line2 }}</div>
+        </div>
+      {% endif %}  
+
+      {% if page.line3 %}
+        {% if page.line1 and page.line2 and page.line4 %}
+          <div class="col-lg-3">
+          {% elseif page.line1 and page.line2 %}
+            <div class="col-lg-4">
+          {% elseif page.line1 and page.line4 %}
+            <div class="col-lg-4">
+          {% elseif page.line2 and page.line4 %}
+            <div class="col-lg-4">
+          {% elseif page.line1 or page.line2 or page.line4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="line3">{{ page.line3 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.line4 %}
+        {% if page.line1 and page.line2 and page.line3 %}
+          <div class="col-lg-3">
+          {% elseif page.line1 and page.line2 %}
+            <div class="col-lg-4">
+          {% elseif page.line1 and page.line3 %}
+            <div class="col-lg-4">
+          {% elseif page.line2 and page.line3 %}
+            <div class="col-lg-4">
+          {% elseif page.line1 or page.line2 or page.line3 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="line4">{{ page.line4 }}</div>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+{% endif %}
+
+{% if page.top_content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        {{ page.top_content }}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% if page.feature1 or page.feature2 or page.feature3 or page.feature4 %}
+  <div class="container">
+    <div class="row">
+      {% if page.feature1 %}
+        {% if page.feature2 and page.feature3 and page.feature4 %}
+          <div class="col-lg-3">
+          {% elseif page.feature2 and page.feature3 %}
+            <div class="col-lg-4">
+          {% elseif page.feature2 and page.feature4 %}
+            <div class="col-lg-4">
+          {% elseif page.feature3 and page.feature4 %}
+            <div class="col-lg-4">
+          {% elseif page.feature2 or page.feature3 or page.feature4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="feature1">{{ page.feature1 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.feature2 %}
+        {% if page.feature1 and page.feature3 and page.feature4 %}
+          <div class="col-lg-3">
+          {% elseif page.feature1 and page.feature3 %}
+            <div class="col-lg-4">
+          {% elseif page.feature1 and page.feature4 %}
+            <div class="col-lg-4">
+          {% elseif page.feature3 and page.feature4 %}
+            <div class="col-lg-4">
+          {% elseif page.feature1 or page.feature3 or page.feature4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="feature2">{{ page.feature2 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.feature3 %}
+        {% if page.feature1 and page.feature2 and page.feature4 %}
+          <div class="col-lg-3">
+          {% elseif page.feature1 and page.feature2 %}
+            <div class="col-lg-4">
+          {% elseif page.feature1 and page.feature4 %}
+            <div class="col-lg-4">
+          {% elseif page.feature2 and page.feature4 %}
+            <div class="col-lg-4">
+          {% elseif page.feature1 or page.feature2 or page.feature4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="feature3">{{ page.feature3 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.feature4 %}
+        {% if page.feature1 and page.feature2 and page.feature3 %}
+          <div class="col-lg-3">
+          {% elseif page.feature1 and page.feature2 %}
+            <div class="col-lg-4">
+          {% elseif page.feature1 and page.feature3 %}
+            <div class="col-lg-4">
+          {% elseif page.feature2 and page.feature3 %}
+            <div class="col-lg-4">
+          {% elseif page.feature1 or page.feature2 or page.feature3 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="feature4">{{ page.feature4 }}</div>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+{% endif %}
+
+{% if page.contenttop1 or page.contenttop2 or page.contenttop3 or page.contenttop4 %}
+  <div class="container">
+    <div class="row">
+      {% if page.contenttop1 %}
+        {% if page.contenttop2 and page.contenttop3 and page.contenttop4 %}
+          <div class="col-lg-3">
+          {% elseif page.contenttop2 and page.contenttop3 %}
+            <div class="col-lg-4">
+          {% elseif page.contenttop2 and page.contenttop4 %}
+            <div class="col-lg-4">
+          {% elseif page.contenttop3 and page.contenttop4 %}
+            <div class="col-lg-4">
+          {% elseif page.contenttop2 or page.contenttop3 or page.contenttop4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="contenttop1">{{ page.contenttop1 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.contenttop2 %}
+        {% if page.contenttop1 and page.contenttop3 and page.contenttop4 %}
+          <div class="col-lg-3">
+          {% elseif page.contenttop1 and page.contenttop3 %}
+            <div class="col-lg-4">
+          {% elseif page.contenttop1 and page.contenttop4 %}
+            <div class="col-lg-4">
+          {% elseif page.contenttop3 and page.contenttop4 %}
+            <div class="col-lg-4">
+          {% elseif page.contenttop1 or page.contenttop3 or page.contenttop4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="contenttop2">{{ page.contenttop2 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.contenttop3 %}
+        {% if page.contenttop1 and page.contenttop2 and page.contenttop4 %}
+          <div class="col-lg-3">
+          {% elseif page.contenttop1 and page.contenttop2 %}
+            <div class="col-lg-4">
+          {% elseif page.contenttop1 and page.contenttop4 %}
+            <div class="col-lg-4">
+          {% elseif page.contenttop2 and page.contenttop4 %}
+            <div class="col-lg-4">
+          {% elseif page.contenttop1 or page.contenttop2 or page.contenttop4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="contenttop3">{{ page.contenttop3 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.contenttop4 %}
+        {% if page.contenttop1 and page.contenttop2 and page.contenttop3 %}
+          <div class="col-lg-3">
+          {% elseif page.contenttop1 and page.contenttop2 %}
+            <div class="col-lg-4">
+          {% elseif page.contenttop1 and page.contenttop3 %}
+            <div class="col-lg-4">
+          {% elseif page.contenttop2 and page.contenttop3 %}
+            <div class="col-lg-4">
+          {% elseif page.contenttop1 or page.contenttop2 or page.contenttop3 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="contenttop4">{{ page.contenttop4 }}</div>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+{% endif %}
+
+    <a id="main-content"></a>
+    <div class="container">
+      <div class="row">
+        {% if front_page %}
+
+            {% if page.sidebar_first %}
+              <div class="sidebar-first sidebar col-lg-3 col-md-3 col-sm-12 col-xs-12" role="complementary">
+                {{ page.secondary_menu }}
+                {{ page.sidebar_first }}
+              </div>
+            {% endif %}
+        
+            <div class="content col-lg-{{ page.main_content_width }} col-md-{{ page.main_content_width }} col-sm-12 col-xs-12">
+              {{ page.highlighted }}
+
+              {{ title_prefix }}
+              {% if title %}
+                <h4>{{ title }}</h4>
+              {% endif %}
+              {{ title_suffix }}
+
+              {{ tabs }}
+
+              {% if action_links %}
+                <nav class="action-links">{{ action_links }}</nav>
+              {% endif %}
+
+              {{ page.content }}
+              {{ feed_icons }}
+            </div>
+
+            {% if page.sidebar_second %}
+              <aside class="sidebar-second sidebar col-lg-3 col-md-3 col-sm-12 col-xs-12" role="complementary">
+                {{ page.sidebar_second }}
+              </aside>
+            {% endif %}
+
+        {% else %}
+
+          {% if page.sidebar_first %}
+            <div class="sidebar-first sidebar col-lg-3 col-md-3 col-sm-12 col-xs-12" role="complementary">
+              {{ page.sidebar_first }}
+            </div>
+          {% endif %}
+    
+          <div class="content col-lg-{{ page.main_content_width }} col-md-{{ page.main_content_width }} col-sm-12 col-xs-12">
+            {{ page.highlighted }}
+
+            {{ tabs }}
+
+             {{ title_prefix }}
+              {% if title %}
+                <h2>{{ title }}</h2>
+              {% endif %}
+              {{ title_suffix }}
+
+            {% if action_links %}
+              <nav class="action-links">{{ action_links }}</nav>
+            {% endif %}
+            <div class="test_class">
+            {{ page.content }}
+            </div>
+            {{ feed_icons }}
+          </div>
+
+          {% if page.sidebar_second %}
+            <aside class="sidebar-second sidebar col-lg-3 col-md-3 col-sm-12 col-xs-12" role="complementary">
+              {{ page.sidebar_second }}
+            </aside>
+          {% endif %}
+        {% endif %}     
+      </div>
+    </div>
+
+  {% if page.featured %}
+    <section id="featured" class="featured">
+      <div class="container">
+        {{ page.featured }}
+      </div>
+    </section>
+  {% endif %}
+
+  {% if messages %}
+    <section id="messages" class="messages">
+      <div class="container">
+        {{ messages }}
+      </div>
+    </section>
+  {% endif %}
+
+  {% if page.help %}
+    <section id="help" class="help">
+      <div class="container">
+        {{ page.help }}
+      </div>
+    </section>
+  {% endif %}
+
+  {% if page.contentbottom1 or page.contentbottom2 or page.contentbottom3 or page.contentbottom4 %}
+  <div class="container">
+    <div class="row">
+      {% if page.contentbottom1 %}
+        {% if page.contentbottom2 and page.contentbottom3 and page.contentbottom4 %}
+          <div class="col-lg-3">
+          {% elseif page.contentbottom2 and page.contentbottom3 %}
+            <div class="col-lg-4">
+          {% elseif page.contentbottom2 and page.contentbottom4 %}
+            <div class="col-lg-4">
+          {% elseif page.contentbottom3 and page.contentbottom4 %}
+            <div class="col-lg-4">
+          {% elseif page.contentbottom2 or page.contentbottom3 or page.contentbottom4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="contentbottom1">{{ page.contentbottom1 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.contentbottom2 %}
+        {% if page.contentbottom1 and page.contentbottom3 and page.contentbottom4 %}
+          <div class="col-lg-3">
+          {% elseif page.contentbottom1 and page.contentbottom3 %}
+            <div class="col-lg-4">
+          {% elseif page.contentbottom1 and page.contentbottom4 %}
+            <div class="col-lg-4">
+          {% elseif page.contentbottom3 and page.contentbottom4 %}
+            <div class="col-lg-4">
+          {% elseif page.contentbottom1 or page.contentbottom3 or page.contentbottom4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="contentbottom2">{{ page.contentbottom2 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.contentbottom3 %}
+        {% if page.contentbottom1 and page.contentbottom2 and page.contentbottom4 %}
+          <div class="col-lg-3">
+          {% elseif page.contentbottom1 and page.contentbottom2 %}
+            <div class="col-lg-4">
+          {% elseif page.contentbottom1 and page.contentbottom4 %}
+            <div class="col-lg-4">
+          {% elseif page.contentbottom2 and page.contentbottom4 %}
+            <div class="col-lg-4">
+          {% elseif page.contentbottom1 or page.contentbottom2 or page.contentbottom4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="contentbottom3">{{ page.contentbottom3 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.contentbottom4 %}
+        {% if page.contentbottom1 and page.contentbottom2 and page.contentbottom3 %}
+          <div class="col-lg-3">
+          {% elseif page.contentbottom1 and page.contentbottom2 %}
+            <div class="col-lg-4">
+          {% elseif page.contentbottom1 and page.contentbottom3 %}
+            <div class="col-lg-4">
+          {% elseif page.contentbottom2 and page.contentbottom3 %}
+            <div class="col-lg-4">
+          {% elseif page.contentbottom1 or page.contentbottom2 or page.contentbottom3 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="contentbottom4">{{ page.contentbottom4 }}</div>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+{% endif %}
+
+{% if page.bottom_line1 or page.bottom_line2 or page.bottom_line3 or page.bottom_line4 %}
+  <div class="container">
+    <div class="row">
+      {% if page.bottom_line1 %}
+        {% if page.bottom_line2 and page.bottom_line3 and page.bottom_line4 %}
+          <div class="col-lg-3">
+          {% elseif page.bottom_line2 and page.bottom_line3 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom_line2 and page.bottom_line4 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom_line3 and page.bottom_line4 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom_line2 or page.bottom_line3 or page.bottom_line4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="bottom_line1">{{ page.bottom_line1 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.bottom_line2 %}
+        {% if page.bottom_line1 and page.bottom_line3 and page.bottom_line4 %}
+          <div class="col-lg-3">
+          {% elseif page.bottom_line1 and page.bottom_line3 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom_line1 and page.bottom_line4 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom_line3 and page.bottom_line4 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom_line1 or page.bottom_line3 or page.bottom_line4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="bottom_line2">{{ page.bottom_line2 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.bottom_line3 %}
+        {% if page.bottom_line1 and page.bottom_line2 and page.bottom_line4 %}
+          <div class="col-lg-3">
+          {% elseif page.bottom_line1 and page.bottom_line2 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom_line1 and page.bottom_line4 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom_line2 and page.bottom_line4 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom_line1 or page.bottom_line2 or page.bottom_line4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="bottom_line3">{{ page.bottom_line3 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.bottom_line4 %}
+        {% if page.bottom_line1 and page.bottom_line2 and page.bottom_line3 %}
+          <div class="col-lg-3">
+          {% elseif page.bottom_line1 and page.bottom_line2 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom_line1 and page.bottom_line3 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom_line2 and page.bottom_line3 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom_line1 or page.bottom_line2 or page.bottom_line3 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="bottom_line4">{{ page.bottom_line4 }}</div>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+{% endif %}
+
+{% if page.bottom1 or page.bottom2 or page.bottom3 or page.bottom4 %}
+  <div class="container">
+    <div class="row">
+      {% if page.bottom1 %}
+        {% if page.bottom2 and page.bottom3 and page.bottom4 %}
+          <div class="col-lg-3">
+          {% elseif page.bottom2 and page.bottom3 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom2 and page.bottom4 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom3 and page.bottom4 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom2 or page.bottom3 or page.bottom4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="bottom1">{{ page.bottom1 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.bottom2 %}
+        {% if page.bottom1 and page.bottom3 and page.bottom4 %}
+          <div class="col-lg-3">
+          {% elseif page.bottom1 and page.bottom3 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom1 and page.bottom4 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom3 and page.bottom4 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom1 or page.bottom3 or page.bottom4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="bottom2">{{ page.bottom2 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.bottom3 %}
+        {% if page.bottom1 and page.bottom2 and page.bottom4 %}
+          <div class="col-lg-3">
+          {% elseif page.bottom1 and page.bottom2 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom1 and page.bottom4 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom2 and page.bottom4 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom1 or page.bottom2 or page.bottom4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="bottom3">{{ page.bottom3 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.bottom4 %}
+        {% if page.bottom1 and page.bottom2 and page.bottom3 %}
+          <div class="col-lg-3">
+          {% elseif page.bottom1 and page.bottom2 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom1 and page.bottom3 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom2 and page.bottom3 %}
+            <div class="col-lg-4">
+          {% elseif page.bottom1 or page.bottom2 or page.bottom3 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="bottom4">{{ page.bottom4 }}</div>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+{% endif %}
+
+{% if page.last1 or page.last2 or page.last3 or page.last4 %}
+  <div class="container">
+    <div class="row">
+      {% if page.last1 %}
+        {% if page.last2 and page.last3 and page.last4 %}
+          <div class="col-lg-3">
+          {% elseif page.last2 and page.last3 %}
+            <div class="col-lg-4">
+          {% elseif page.last2 and page.last4 %}
+            <div class="col-lg-4">
+          {% elseif page.last3 and page.last4 %}
+            <div class="col-lg-4">
+          {% elseif page.last2 or page.last3 or page.last4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="last1">{{ page.last1 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.last2 %}
+        {% if page.last1 and page.last3 and page.last4 %}
+          <div class="col-lg-3">
+          {% elseif page.last1 and page.last3 %}
+            <div class="col-lg-4">
+          {% elseif page.last1 and page.last4 %}
+            <div class="col-lg-4">
+          {% elseif page.last3 and page.last4 %}
+            <div class="col-lg-4">
+          {% elseif page.last1 or page.last3 or page.last4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="last2">{{ page.last2 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.last3 %}
+        {% if page.last1 and page.last2 and page.last4 %}
+          <div class="col-lg-3">
+          {% elseif page.last1 and page.last2 %}
+            <div class="col-lg-4">
+          {% elseif page.last1 and page.last4 %}
+            <div class="col-lg-4">
+          {% elseif page.last2 and page.last4 %}
+            <div class="col-lg-4">
+          {% elseif page.last1 or page.last2 or page.last4 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="last3">{{ page.last3 }}</div>
+        </div>
+      {% endif %}
+
+      {% if page.last4 %}
+        {% if page.last1 and page.last2 and page.last3 %}
+          <div class="col-lg-3">
+          {% elseif page.last1 and page.last2 %}
+            <div class="col-lg-4">
+          {% elseif page.last1 and page.last3 %}
+            <div class="col-lg-4">
+          {% elseif page.last2 and page.last3 %}
+            <div class="col-lg-4">
+          {% elseif page.last1 or page.last2 or page.last3 %}
+            <div class="col-lg-6">
+          {% else  %}
+            <div class="col-lg-12">
+        {% endif %}
+          <div class="last4">{{ page.last4 }}</div>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+{% endif %}
+
+  {% if page.panel_first_1 %}
+    <section id="panel_first" class="panel_first">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            {{ page.panel_first_1 }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  {% if page.panel_second_1 or page.panel_second_2 or page.panel_second_3 or page.panel_second_4 %}
+    <section id="panel_second" class="panel_second">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            {{ page.panel_second_1 }}
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            {{ page.panel_second_2 }}
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            {{ page.panel_second_3 }}
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            {{ page.panel_second_4 }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  {% if breadcrumb %}
+    <section id="breadcrumb" class="breadcrumb">
+      <div class="container">
+        {{ breadcrumb }}
+      </div>
+    </section>
+  {% endif %}
+  <!-- <a href="#Top" class="btn-btt" title="Back to Top" style="display: block;"></a>   -->        
+</div>
+  <footer id="footer" class="site-footer" role="contentinfo">
+    {% if page.footer %}
+      <div class="container">
+        <div class="row">
+          {{ page.footer }}
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="container">
+      <div class="row">
+        <div class="layout-container">
+        {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
+          <div class="site-footer__top clearfix">
+            {{ page.footer_first }}
+            {{ page.footer_second }}
+            {{ page.footer_third }}
+            {{ page.footer_fourth }}
+          </div>
+        {% endif %}
+        {% if page.footer_fifth %}
+          <div class="site-footer__bottom">
+            {{ page.footer_fifth }}
+          </div>
+        {% endif %}
+      </div>
+      </div>
+    </div>
+
+    {% if page.footer1 or page.footer2 or page.footer3 or page.footer4 %}
+      <div class="container">
+        <div class="row">
+          {% if page.footer1 %}
+            {% if page.footer2 and page.footer3 and page.footer4 %}
+              <div class="col-lg-3">
+              {% elseif page.footer2 and page.footer3 %}
+                <div class="col-lg-4">
+              {% elseif page.footer2 and page.footer4 %}
+                <div class="col-lg-4">
+              {% elseif page.footer3 and page.footer4 %}
+                <div class="col-lg-4">
+              {% elseif page.footer2 or page.footer3 or page.footer4 %}
+                <div class="col-lg-6">
+              {% else  %}
+                <div class="col-lg-12">
+            {% endif %}
+              <div class="footer1">{{ page.footer1 }}</div>
+            </div>
+          {% endif %}
+
+          {% if page.footer2 %}
+            {% if page.footer1 and page.footer3 and page.footer4 %}
+              <div class="col-lg-3">
+              {% elseif page.footer1 and page.footer3 %}
+                <div class="col-lg-4">
+              {% elseif page.footer1 and page.footer4 %}
+                <div class="col-lg-4">
+              {% elseif page.footer3 and page.footer4 %}
+                <div class="col-lg-4">
+              {% elseif page.footer1 or page.footer3 or page.footer4 %}
+                <div class="col-lg-6">
+              {% else  %}
+                <div class="col-lg-12">
+            {% endif %}
+              <div class="footer2">{{ page.footer2 }}</div>
+            </div>
+          {% endif %}
+
+          {% if page.footer3 %}
+            {% if page.footer1 and page.footer2 and page.footer4 %}
+              <div class="col-lg-3">
+              {% elseif page.footer1 and page.footer2 %}
+                <div class="col-lg-4">
+              {% elseif page.footer1 and page.footer4 %}
+                <div class="col-lg-4">
+              {% elseif page.footer2 and page.footer4 %}
+                <div class="col-lg-4">
+              {% elseif page.footer1 or page.footer2 or page.footer4 %}
+                <div class="col-lg-6">
+              {% else  %}
+                <div class="col-lg-12">
+            {% endif %}
+              <div class="footer3">{{ page.footer3 }}</div>
+            </div>
+          {% endif %}
+
+          {% if page.footer4 %}
+            {% if page.footer1 and page.footer2 and page.footer3 %}
+              <div class="col-lg-3">
+              {% elseif page.footer1 and page.footer2 %}
+                <div class="col-lg-4">
+              {% elseif page.footer1 and page.footer3 %}
+                <div class="col-lg-4">
+              {% elseif page.footer2 and page.footer3 %}
+                <div class="col-lg-4">
+              {% elseif page.footer1 or page.footer2 or page.footer3 %}
+                <div class="col-lg-6">
+              {% else  %}
+                <div class="col-lg-12">
+            {% endif %}
+              <div class="footer4">{{ page.footer4 }}</div>
+            </div>
+          {% endif %}
+
+          </div>
+
+        {% endif %}
+
+        <div class="bottom_footer">
+        <div class="container">
+          <div class="row">
+              {% if show_hide_copyright %}
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="copyright">
+                        <a href="{{ copyright_url }}" target="_blank">
+                          {% trans %}
+                            Copyright {{copyright_date }} {{copyright_developedby }}
+                          {% endtrans %}
+                        </a>
+                    </div>
+                </div>
+              {% endif %}
+
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="switchButton">
+                    <span class="bt-blue scrollup"></span>
+                    <span class="bt-lghtGre scrollup"></span>
+                    <span class="bt-orange scrollup"></span>
+                    <span class="bt-red scrollup"></span>
+                    <span class="bt-green scrollup"></span>
+                    <span class="bt-white scrollup"></span>
+                </div>
+              </div>
+
+              {% if show_hide_icon %}
+              <div class="socBox col-lg-3">
+                <ul class="socIcons">
+                    {% set soc = {
+                        "fa-twitter" : twitter,
+                        "fa-facebook" : facebook,
+                        "fa-flickr" : flickr,
+                        "fa-linkedin" : linkedin,
+                        "fa-play" : youtube,
+                        "fa-pinterest" : pinterest,
+                        "fa-google-plus" : google,
+                        "fa-dribbble" : dribbble,
+                        "fa-vimeo-square" : vimeo,
+                        "fa-instagram" : instagram,
+                        "fa-vk" : vk }
+                    %}
+                     {% for key, value in soc %}
+                        {% if value %}
+                          <li>
+                              <a href="{{ value }}" target="_blank">
+                                  <i class="fa {{ key }}"></i>
+                              </a>
+                          </li>
+                        {% endif %}
+                      {% endfor %}
+                </ul>
+            </div>
+          {% endif %}
+
+          </div>
+        </div>
+        </div>
+        </div>
+  </footer>
+</div>
+</div>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+  <head>
+    <head-placeholder token="{{ placeholder_token|raw }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token|raw }}">
+    <js-placeholder token="{{ placeholder_token|raw }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower|Rock+Salt|Shadows+Into+Light+Two|Source+Sans+Pro:
+    200,300,400,600,700,900,200italic,300italic,400italic,600italic,
+    700italic,900italic|Dosis:200,300,400,500,600,700,800|Abel|
+    Droid+Sans:400,700|Lato:100,300,400,700,900,100italic,300italic,
+    400italic,700italic,900italic|Lora:400,700,400italic,
+    700italic|PT+Sans:400,700,400italic,700italic|PT+Sans+Narrow:400,700
+    |Quicksand:300,400,700|Ubuntu:300,400,500,700,300italic,400italic,500italic,
+    700italic|Lobster|Ubuntu+Condensed|Oxygen:400,300,700|Oswald:700,400,300
+    |Open+Sans+Condensed:300,700,300italic|Roboto+Condensed:300italic,400italic,
+    700italic,400,700,300|Open+Sans:300italic,400italic,600italic,700italic,
+    800italic,800,700,400,600,300|Prosto+One|Francois+One|Comfortaa:700,300,400
+    |Raleway:300,600,900,500,400,100,800,200,700|Roboto:300,700,500italic,900,
+    300italic,400italic,900italic,100italic,100,500,400,700italic|Roboto+Slab:300,
+    700,100,400|Share:700,700italic,400italic,400' rel='stylesheet' type='text/css'
+  >
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+  rel="stylesheet">
+  </head>
+  <body{{ attributes }}>
+    <a href="#main-content" class="visually-hidden focusable">
+      {{ 'Skip to main content'|t }}
+    </a>
+    {{ page_top }}
+    {{ page }}
+    {{ page_bottom }}
+    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+  </body>
+</html>
+

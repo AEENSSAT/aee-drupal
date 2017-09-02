@@ -1,0 +1,25 @@
+<!-- <?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="222.ffffffpt" height="222.ffffffpt" viewBox="0 0 222.ffffff 60.ffffff"
+ preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.13, written by Peter Selinger 2001-2015
+</metadata>
+<g transform="translate(0.ffffff,60.ffffff) scale(0.100000,-0.100000)"
+fill="#ffffff" stroke="none">
+<path d="M0 300 l0 -300 1110 0 1110 0 0 300 0 300 -1110 0 -1110 0 0 -300z"/>
+</g>
+</svg> -->
+
+
+<svg width="300" height="60" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <g>
+  <title>Layer 1</title>
+  <text transform="rotate(-0.9963479042053223 43.30197143554578,54.75551223754908) matrix(2.473434448242188,0,0,1.985328953677435,-32.09913143465888,35.89488808799138) " xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_1" y="16.996747" x="30.495539" opacity="0.25" stroke-width="0" stroke="#ffffff" fill="#ffffff"/>
+  <text transform="matrix(1.235294122248888,0,0,1.185185269450109,-21.470588440075517,-19.62963299279616) " xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_2" y="46" x="36"  stroke-width="0" stroke="#ffffff" fill="#ffffff"/>
+  <text font-style="normal" font-weight="bold" transform="matrix(2.2315924891195554,0,0,1.4806255158209658,-74.858795412364,19.943074617453995) " xml:space="preserve" text-anchor="middle" font-family="Fantasy" font-size="24" id="svg_3" y="15.744304" x="91" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="#ffffff" fill="#ffffff">Ordasoft</text>
+ </g>
+</svg>

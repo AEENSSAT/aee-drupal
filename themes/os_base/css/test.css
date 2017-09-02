@@ -1,0 +1,46 @@
+body {
+  background-image: url(../images/body_bg6.png);
+}
+body #color p {
+  font-family: Oswald, sans-serif !important;
+}
+body #color a {
+  font-family: Abel, sans-serif;
+  text-decoration: none;
+}
+body #color a:hover {
+  text-decoration: none;
+}
+#main-navbar-collapse li a {
+  font-family: Abel, sans-serif;
+  text-decoration: none;
+}
+#main-navbar-collapse li a:hover {
+  text-decoration: none;
+}
+#color #footer a {
+  font-family: Abel, sans-serif;
+  text-decoration: none;
+}
+#color #footer a:hover {
+  text-decoration: none;
+}
+
+#color h1 {
+  font-family: Abel, sans-serif!important;
+}
+#color h2 {
+  font-family: Abel, sans-serif!important;
+}
+#color h3 {
+  font-family: Abel, sans-serif!important;
+}
+#color h4 {
+  font-family: Abel, sans-serif!important;
+}
+#color h5 {
+  font-family: Abel, sans-serif!important;
+}
+#color h6 {
+  font-family: Abel, sans-serif!important;
+}

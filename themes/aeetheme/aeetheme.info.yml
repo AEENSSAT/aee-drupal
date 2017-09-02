@@ -14,4 +14,4 @@ regions:
   page_top: 'Page top'
   page_bottom: 'Page bottom'
 libraries:
-  - 'aeeTheme/styles'
+  - 'aeetheme/styles'

@@ -3,3 +3,8 @@ global-styling:
   css:
     theme:
       css/main.css: {}
+      fonts/prisma.css: {}
+      fonts/sansation.css: {}
+  js:
+    theme:
+      js/masonry.pkgd.min.js: {}

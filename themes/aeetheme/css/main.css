@@ -6,6 +6,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow: auto;
+  background: red;
 }
 .txt-orange {
   color: #f29400 !important;

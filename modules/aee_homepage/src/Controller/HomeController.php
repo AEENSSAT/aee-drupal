@@ -21,6 +21,12 @@ class HomeController extends ControllerBase {
   public function home() {
     $output = array();
 
+    $nids = \Drupal::entityQuery('node')->execute();
+    $nodes = \Drupal\node\Entity\Node::loadMultiple($nids);
+
+    var_dump($nids);
+    var_dump($nodes);
+
     $output['homepage'] = array(
       '#markup' => $this->t('Hello World!'),
     );

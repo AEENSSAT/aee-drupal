@@ -1,0 +1,4 @@
+name: AEE homepage
+core: 8.x
+type: module
+description: Custom homepage module

@@ -2,7 +2,7 @@ name: AEE Theme
 description: Thème Drupal pour l'Association des Eleves de l'ENSSAT
 core: 8.x
 type: theme
-base theme: classy
+base theme: bartik
 libraries:
   - aeetheme/styles
 regions:

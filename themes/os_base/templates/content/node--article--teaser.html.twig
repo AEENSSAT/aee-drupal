@@ -2,7 +2,7 @@
 
 <a href="{{ url }}">
     <div class="flag flag-red">Actu AEE</div>
-    <img src="./themes/os_base/imgs/TOSS.jpg" alt="">
+    <img src="{{ file_url(node.field_image.entity.fileuri) }}" alt="">
     <p>{{ label }}</p>
     <span class="date">{{ date }}</span>
 </a>

@@ -17,6 +17,8 @@ body {
   width: 1000px;
   margin: auto;
 }
+
+
 #landing {
   height: 100vh;
   width: 100%;
@@ -198,6 +200,11 @@ body {
   border-radius: 1px;
   width: 24%;
 }
+
+#wrapper.homepage > #actus #articles .view-content {
+    min-height: 300px !important;
+}
+
 #wrapper.homepage > #actus article:nth-child(3n) {
   color: #f29400;
   background: white;

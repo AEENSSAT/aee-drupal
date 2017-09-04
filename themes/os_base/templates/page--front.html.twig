@@ -35,161 +35,36 @@
     <section id="actus">
         <div class="centerDiv">
             <h2>Toute l'actualité</h2>
-            <div class="content col-lg-{{ page.main_content_width }} col-md-{{ page.main_content_width }} col-sm-12 col-xs-12">
-              {{ page.highlighted }}
-
-              {{ tabs }}
-
-               {{ title_prefix }}
-                {% if title %}
-                  <h2>{{ title }}</h2>
-                {% endif %}
-                {{ title_suffix }}
-
-              {% if action_links %}
-                <nav class="action-links">{{ action_links }}</nav>
-              {% endif %}
-              <div class="test_class">
-              {{ page.content }}
-              </div>
-              {{ feed_icons }}
-            </div>
             <div id="articles">
-                <article class="grid-item">
-                    <a href="article.html">
-                        <div class="flag flag-red">Actu AEE</div>
-                        <img src="./themes/os_base/imgs/background.jpg" alt="">
-                        <p>Soirée déguisée le 25 Septembre à la K'Fet</p>
-                        <span class="date">02 septembre 2017</span>
-                    </a>
-                </article>
 
-                <article class="grid-item">
-                    <a href="article.html">
-                        <div class="flag flag-green">Actu AEE</div>
-                        <img src="./themes/os_base/imgs/oldlogo.jpg" alt="">
-                        <p>Les nouveaux goodies de l'AEE sont en pré-commande !</p>
-                        <span class="date">02 septembre 2017</span>
-                    </a>
-                </article>
+                <div class="content col-lg-{{ page.main_content_width }} col-md-{{ page.main_content_width }} col-sm-12 col-xs-12">
+                  {{ page.highlighted }}
 
-                <article class="grid-item">
-                    <a href="article.html">
-                        <div class="flag flag-red">Actu AEE</div>
-                        <div class="flag flag-red">Actu AEE</div>
-                        <img src="./themes/os_base/imgs/TOSS.jpg" alt="">
-                        <p>Retour sur la participation de l'ENSSAT au TOSS 2017 !</p>
-                        <span class="date">02 septembre 2017</span>
-                    </a>
-                </article>
+                  {{ tabs }}
 
-                <article class="grid-item">
+                   {{ title_prefix }}
+                    {% if title %}
+                      <h2>{{ title }}</h2>
+                    {% endif %}
+                    {{ title_suffix }}
+
+                  {% if action_links %}
+                    <nav class="action-links">{{ action_links }}</nav>
+                  {% endif %}
+                  <div class="test_class">
+                  {{ page.content }}
+                  </div>
+                  {{ feed_icons }}
+                </div>
+
+                <!--<article class="grid-item">
                     <a href="article.html">
                         <div class="flag flag-green">Actu AEE</div>
                         <img src="./themes/os_base/imgs/background.jpg" alt="">
                         <p>Soirée déguisée le 25 Septembre à la K'Fet</p>
                         <span class="date">02 septembre 2017</span>
                     </a>
-                </article>
-
-                <article class="grid-item">
-                    <a href="article.html">
-                        <div class="flag flag-red">Actu AEE</div>
-                        <img src="./themes/os_base/imgs/background.jpg" alt="">
-                        <p>Soirée déguisée le 25 Septembre à la K'Fet</p>
-                        <span class="date">02 septembre 2017</span>
-                    </a>
-                </article>
-
-                <article class="grid-item">
-                    <a href="article.html">
-                        <div class="flag flag-red">Actu AEE</div>
-                        <img src="./themes/os_base/imgs/background.jpg" alt="">
-                        <p>Soirée déguisée le 25 Septembre à la K'Fet</p>
-                        <span class="date">02 septembre 2017</span>
-                    </a>
-                </article>
-
-                <article class="grid-item">
-                    <a href="article.html">
-                        <div class="flag flag-red">Actu AEE</div>
-                        <img src="./themes/os_base/imgs/oldlogo.jpg" alt="">
-                        <p>Les nouveaux goodies de l'AEE sont en pré-commande !</p>
-                        <span class="date">02 septembre 2017</span>
-                    </a>
-                </article>
-
-                <article class="grid-item">
-                    <a href="article.html">
-                        <div class="flag flag-red">Actu AEE</div>
-                        <img src="./themes/os_base/imgs/TOSS.jpg" alt="">
-                        <p>Retour sur la participation de l'ENSSAT au TOSS 2017 !</p>
-                        <span class="date">02 septembre 2017</span>
-                    </a>
-                </article>
-
-                <article class="grid-item">
-                    <a href="article.html">
-                        <div class="flag flag-red">Actu AEE</div>
-                        <img src="./themes/os_base/imgs/background.jpg" alt="">
-                        <p>Soirée déguisée le 25 Septembre à la K'Fet</p>
-                        <span class="date">02 septembre 2017</span>
-                    </a>
-                </article>
-
-                <article class="grid-item">
-                    <a href="article.html">
-                        <div class="flag flag-red">Actu AEE</div>
-                        <img src="./themes/os_base/imgs/background.jpg" alt="">
-                        <p>Soirée déguisée le 25 Septembre à la K'Fet</p>
-                        <span class="date">02 septembre 2017</span>
-                    </a>
-                </article>
-
-                <article class="grid-item">
-                    <a href="article.html">
-                        <div class="flag flag-red">Actu AEE</div>
-                        <img src="./themes/os_base/imgs/background.jpg" alt="">
-                        <p>Soirée déguisée le 25 Septembre à la K'Fet</p>
-                        <span class="date">02 septembre 2017</span>
-                    </a>
-                </article>
-
-                <article class="grid-item">
-                    <a href="article.html">
-                        <div class="flag flag-green">Actu AEE</div>
-                        <img src="./themes/os_base/imgs/oldlogo.jpg" alt="">
-                        <p>Les nouveaux goodies de l'AEE sont en pré-commande !</p>
-                        <span class="date">02 septembre 2017</span>
-                    </a>
-                </article>
-
-                <article class="grid-item">
-                    <a href="article.html">
-                        <div class="flag flag-green">Actu AEE</div>
-                        <img src="./themes/os_base/imgs/TOSS.jpg" alt="">
-                        <p>Retour sur la participation de l'ENSSAT au TOSS 2017 !</p>
-                        <span class="date">02 septembre 2017</span>
-                    </a>
-                </article>
-
-                <article class="grid-item">
-                    <a href="article.html">
-                        <div class="flag flag-red">Actu AEE</div>
-                        <img src="./themes/os_base/imgs/background.jpg" alt="">
-                        <p>Soirée déguisée le 25 Septembre à la K'Fet</p>
-                        <span class="date">02 septembre 2017</span>
-                    </a>
-                </article>
-
-                <article class="grid-item">
-                    <a href="article.html">
-                        <div class="flag flag-green">Actu AEE</div>
-                        <img src="./themes/os_base/imgs/background.jpg" alt="">
-                        <p>Soirée déguisée le 25 Septembre à la K'Fet</p>
-                        <span class="date">02 septembre 2017</span>
-                    </a>
-                </article>
+                </article>-->
             </div>
 
             <div class="buttons">

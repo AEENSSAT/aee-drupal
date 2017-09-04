@@ -1,23 +1,8 @@
 {{ attach_library('classy/node') }}
 
-{{ title_prefix }}
-{% if not page %}
-  <p>
-    <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-  </p>
-{% endif %}
-{{ title_suffix }}
-
-{% if display_submitted %}
-  <footer class="node__meta">
-    {{ author_picture }}
-    <div>
-      {% trans %}{{ date }}{% endtrans %}
-      {{ metadata }}
-    </div>
-  </footer>
-{% endif %}
-
-<div>
-  {{ content }}
-</div>
+<a href="{{ url }}">
+    <div class="flag flag-red">Actu AEE</div>
+    <img src="./themes/os_base/imgs/TOSS.jpg" alt="">
+    <p>{{ label }}</p>
+    <span class="date">{{ date }}</span>
+</a>

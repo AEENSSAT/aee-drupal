@@ -1,7 +1,0 @@
-aee_homepage.homepage:
-  path: '/home'
-  defaults:
-    _controller: 'Drupal\aee_homepage\Controller\HomeController::home'
-    _title: 'Homepage'
-  requirements:
-    _permission: 'access content'

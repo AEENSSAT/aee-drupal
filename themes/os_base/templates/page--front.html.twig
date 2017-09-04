@@ -35,7 +35,25 @@
     <section id="actus">
         <div class="centerDiv">
             <h2>Toute l'actualité</h2>
-            {% include 'views-view.html.twig' %}
+            <div class="content col-lg-{{ page.main_content_width }} col-md-{{ page.main_content_width }} col-sm-12 col-xs-12">
+              {{ page.highlighted }}
+
+              {{ tabs }}
+
+               {{ title_prefix }}
+                {% if title %}
+                  <h2>{{ title }}</h2>
+                {% endif %}
+                {{ title_suffix }}
+
+              {% if action_links %}
+                <nav class="action-links">{{ action_links }}</nav>
+              {% endif %}
+              <div class="test_class">
+              {{ page.content }}
+              </div>
+              {{ feed_icons }}
+            </div>
             <div id="articles">
                 <article class="grid-item">
                     <a href="article.html">

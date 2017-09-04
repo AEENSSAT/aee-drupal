@@ -15,14 +15,14 @@
 
     <section role="main">
         <header>
-            <img src="../themes/os_base/imgs/ploumanach.jpg" alt="" class="head">
+            <img src="{{ file_url(node.field_image.entity.fileuri) }}" alt="" class="head">
         </header>
 
         <section class="content">
 
             <article class="">
                 <div class="centerDiv">
-                    <h2>{ title }}</h2>
+                    <h2>{{ title }}</h2>
 
                     {{ page.content }}
                 </div>

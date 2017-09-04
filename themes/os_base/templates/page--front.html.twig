@@ -35,7 +35,7 @@
     <section id="actus">
         <div class="centerDiv">
             <h2>Toute l'actualité</h2>
-            
+
             <div id="articles">
               {{ page.content }}
             </div>
@@ -69,7 +69,7 @@
 
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", function(){
-    var elem = document.querySelector('#articles');
+    var elem = document.querySelector('#articles .view-content');
     var msnry = new Masonry( elem, {
         itemSelector: '.grid-item',
         gutter: 10,

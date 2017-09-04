@@ -383,6 +383,11 @@ body {
   top: -300px;
   width: 800px;
 }
+
+#wrapper.article section[role="main"] .content article .centerDiv article {
+    padding: 6px;    
+}
+
 #wrapper.article section[role="main"] .content article .centerDiv h3 {
   font-size: 30px;
   font-family: Georgia, 'Droid serif', serif;

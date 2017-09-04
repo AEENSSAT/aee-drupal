@@ -76,10 +76,6 @@
     {{ label }}
 </h2>
 
-<div{{ content_attributes.addClass('node__content') }}>
-{{ content }}
-</div>
-
 {% if display_submitted %}
 <footer>
     <div>
@@ -88,3 +84,7 @@
     </div>
 </footer>
 {% endif %}
+
+<div{{ content_attributes.addClass('node__content') }}>
+{{ content }}
+</div>

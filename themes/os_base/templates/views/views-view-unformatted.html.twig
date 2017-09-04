@@ -1,3 +1,5 @@
-<article class="">
+{% for row in rows %}
+  <article>
     {{ row.content }}
-</article>
+  </article>
+{% endfor %}

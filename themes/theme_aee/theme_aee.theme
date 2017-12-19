@@ -1,0 +1,33 @@
+<?php
+
+
+function theme_aee_preprocess_block__views_block__liste_clubs_block_liste_clubs(&$variables){
+  // Array used in twig template.
+  $variables['club'] = array();
+
+  foreach($variables['content']['view_build']['#view']->result as $r) {
+    $nid = $r->nid; // get nid to load node.
+    $node = $node = \Drupal\node\Entity\Node::load($nid); // Load node.
+    die();
+    // Create array with real values.
+    $row = array(
+      'title' => $node->getTitle(),
+      'url' => \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$nid)
+    );
+    // Add values in array of all clubs.
+    array_push($variables['club'], $row);
+  }
+}
+
+function theme_aee_preprocess_block__theme_aee_main_menu(&$variables){
+  foreach($variables['content']['#items'] as $item){
+    $title = $item['title'];
+    $url = $item['url']->toString();
+    $variables["menu_link"][$title] = $url;
+  }
+  if($variables['logo'] != null){
+    $variables['logo'] = str_replace('.svg', '.png', $variables['logo']);
+    }else{
+      $variables['logo'] = "http://".\Drupal::request()->getHost().$GLOBALS['base_path']."themes/theme_aee/logo.png";
+    }
+}

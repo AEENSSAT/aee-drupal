@@ -1,0 +1,19 @@
+<?php
+// remove description from user login form text fields
+function aee_login_form_form_alter(&$form, &$form_state, &$form_id) {
+  switch ($form_id) {
+    case 'user_login_form':
+      $form['name'] = array('#type'  => 'textfield',
+                            '#placeholder' => 'Identifiant Enssat',
+                            '#description' => t(''),
+                            '#required' => TRUE,
+                           );
+      $form['pass'] = array('#type'  => 'password',
+                            '#placeholder' => 'Mot de passe UNIX',
+                            '#description' => t(''),
+                            '#required' => TRUE,
+                           );
+      //die();
+      break;
+  }
+}

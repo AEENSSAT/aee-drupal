@@ -1,0 +1,4 @@
+name: aee_login_form
+description: Alter the user login form
+core: 8.x
+type: module

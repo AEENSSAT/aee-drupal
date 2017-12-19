@@ -1,0 +1,9 @@
+<aside>
+  <nav class="menu_clubs">
+    <ul>
+      {% for c in club %}
+        <li><a href="{{ c.url }}">{{ c.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</aside>

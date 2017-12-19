@@ -8,7 +8,7 @@ Placing downloaded and custom themes in this directory separates downloaded and
 custom themes from Drupal core's themes. This allows Drupal core to be updated
 without overwriting these files.
 
-DOWNLOAD ADDITIONAL TH EMES
+DOWNLOAD ADDITIONAL THEMES
 --------------------------
 
 Contributed themes from the Drupal community may be downloaded at

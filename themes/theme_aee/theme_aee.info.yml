@@ -1,0 +1,7 @@
+name: Thème de l'AEE
+type: theme
+description: 'Thème dédié au developpement du site AEE'
+core: 8.x
+base theme: classy
+libraries:
+  - theme_aee/general
